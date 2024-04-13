@@ -7,21 +7,80 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+
+    --small-font-size : 16px;
 }
+/**Ce que j'ai ajouté**/
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-logo{
+    width: 61px;
+    height: 19px;
+    padding : 30px 50px;
+}
+
+
+.nav-links{
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    padding : 0 50px;
+    margin : 0; /* annule le margin par défaut*/
+    gap : 68px;
+    list-style-type: none;
+    font-size : var(--small-font-size);
+
+    
+}
+
+.nav-links li {
+    height: 100%; /* Ajuste la hauteur pour remplir le parent */
+}
+
+.nav-links li a {
+    display: flex; /* Assure que l'ancre se comporte comme un bloc */
+    align-items: end;
+    height: 100%;
+    border-top: 2px solid transparent; /* Définit une bordure transparente */
+    transition: border-top-color 0.3s; /* Ajoute une transition pour une animation fluide */
+}
+
+.nav-links li a:hover {
+    color: var(--main-color);
+    border-top-color : var(--main-color);
+}
+
+
+
+
+
+
+/** ce qui était déjà la**/
 
 .fa-solid {
     color: var(--main-color);
 }
 
 body {
+    margin : 0;
     display: flex;
     justify-content: center;
+}
+
+main{
+    padding : 0 50px;
 }
 
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    padding: 0 0px;
     box-sizing: border-box;
 }
 

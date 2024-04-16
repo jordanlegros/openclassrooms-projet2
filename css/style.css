@@ -7,21 +7,238 @@
     --main-color: #0065FC;
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
+
+    --small-font-size : 16px;
 }
+/**Ce que j'ai ajouté**/
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h1{
+font-size : 22px;
+font-weight: 700;
+margin : 0;
+}
+
+h2{
+    font-size : 18px;
+    font-weight: 700;
+    margin : 0;
+}
+
+h3{
+font-size : 16px;
+font-weight: 700;
+margin : 0;
+
+}
+
+p{
+    margin: 0;
+}
+
+
+.header-logo{
+    width: 61px;
+    height: 19px;
+    padding : 30px 50px;
+}
+
+
+.nav-links{
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    padding : 0 50px;
+    margin : 0; /* annule le margin par défaut*/
+    gap : 68px;
+    list-style-type: none;
+    font-size : var(--small-font-size);
+
+    
+}
+
+.nav-links li {
+    height: 100%; /* Ajuste la hauteur pour remplir le parent */
+}
+
+.nav-links li a {
+    display: flex; /* Assure que l'ancre se comporte comme un bloc */
+    align-items: end;
+    height: 100%;
+    border-top: 2px solid transparent; /* Définit une bordure transparente */
+    transition: border-top-color 0.3s; /* Ajoute une transition pour une animation fluide */
+}
+
+.nav-links li a:hover {
+    color: var(--main-color);
+    border-top-color : var(--main-color);
+}
+
+.search-and-filters{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    margin : 35px 0;
+    
+}
+
+.search-and-filters-title{
+    display: flex;
+    flex-direction: column;
+}
+
+.search-bar{
+    height: 49px;
+    display: flex;
+    flex-direction: row;
+}
+
+.search-bar-pictogram{
+    border-radius: 15px 0px 0px 15px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg-color);
+}
+
+#localization-pictogram{
+    color : black;
+}
+
+
+#search-input{
+    text-align: center;
+    font-size : 18px;
+    font-weight: 700;
+    border: 2px solid var(--main-bg-color);
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+.search-bar-button{
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 0px 15px 15px 0px;
+    padding: 0 15px;
+}
+
+#search-button{
+    height: 100%;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    color : white;
+    background: none;
+    
+}
+
+#search-pictogram{
+    display : none;
+}
+
+.filters-block{
+    display: flex;
+    flex-direction: column;
+}
+
+.filters-list{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.filter{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid var(--main-bg-color);
+    border-radius: 25px;
+    padding: 0 25px;
+    transition: background-color 0.3s;
+}
+
+.filter:hover{
+    background-color: var(--filter-bg-color);
+
+}
+
+.filter-pictogram{
+    height: 22px;
+    width: 22px;
+}
+
+.search-and-filters-info{
+    height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap : 10px;
+}
+
+.hebergements-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hebergements-cards .card{
+    height: 207px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.hebergements-cards img{
+    width: 100%;
+    height: 124px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.hebergements-cards .card-content{
+    padding : 0 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65px;
+    gap : 8px;
+}
+
+/** ce qui était déjà la**/
 
 .fa-solid {
     color: var(--main-color);
 }
 
 body {
+    margin : 0;
     display: flex;
     justify-content: center;
+}
+
+main{
+    padding : 0 50px;
 }
 
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    padding: 0 0px;
     box-sizing: border-box;
 }
 
@@ -74,6 +291,9 @@ a {
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /****** Populaires ***********/

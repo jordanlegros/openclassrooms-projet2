@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="user-scalable=no, width=320, initial-scale=1.0" />    
     <title>Booki</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,8 +40,10 @@
                     </div>    
                     <input type="text" id="search-input" value="Marseille, France" >
                     <div class="search-bar-button">
-                        <input type="submit" id="search-button" value="Rechercher">
-                        <i class="fa-solid fa-magnifying-glass" id="search-pictogram"></i>
+                        <button type="submit" id="search-button">
+                            <span class="search-button-desktop">Rechercher</span>
+                            <i class="fa-solid fa-magnifying-glass" id="search-pictogram"></i>
+                        </button>
                     </div>
                 </form>
                 
@@ -199,7 +201,7 @@
                 <section class="populaires">
                     <div class="populaires-title">
                         <h2 class="section-title">Les plus populaires</h2>
-                        <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                        <i class="fa-solid fa-chart-line " aria-hidden="true"></i>
                     </div>
                     <div class="populaires-cards">
                         <a href="#">

@@ -12,6 +12,7 @@
 
     --mobile-padding :5%;
 }
+
 /**Ce que j'ai ajouté**/
 
 header{
@@ -57,7 +58,7 @@ p{
     flex-direction: row;
     align-items: end;
     padding : 0 50px;
-    margin : 0; /* annule le margin par défaut*/
+    margin : 0; 
     gap : 68px;
     list-style-type: none;
     font-size : var(--small-font-size);
@@ -66,15 +67,15 @@ p{
 }
 
 .nav-links li {
-    height: 100%; /* Ajuste la hauteur pour remplir le parent */
+    height: 100%;
 }
 
 .nav-links li a {
-    display: flex; /* Assure que l'ancre se comporte comme un bloc */
+    display: flex;
     align-items: end;
     height: 100%;
-    border-top: 2px solid transparent; /* Définit une bordure transparente */
-    transition: border-top-color 0.3s; /* Ajoute une transition pour une animation fluide */
+    border-top: 2px solid transparent;
+    transition: border-top-color 0.3s; 
 }
 
 .nav-links li a:hover {
@@ -175,6 +176,10 @@ input[type="text"]:focus {
     transition: background-color 0.3s;
 }
 
+.filter h3{
+    font-size: 16px;
+}
+
 .filter:hover{
     background-color: var(--filter-bg-color);
 
@@ -198,7 +203,7 @@ input[type="text"]:focus {
     flex-direction: row;
     flex-wrap: wrap; 
     justify-content: space-between;
-    gap: 2vw;
+    gap: 10px;
 }
 
 .hebergements-card-container{
@@ -304,7 +309,13 @@ footer{
     color: var(--main-color);
 }
 
+html{
+    height: 100%;
+    overflow-x: hidden;
+}
+
 body {
+    height: 100%;
     overflow-x: hidden;
     margin : 0;
     display: flex;
@@ -316,10 +327,14 @@ main{
 }
 
 .main-container {
+    height: 100%;
     width: 100%;
     max-width: 1440px;
     padding: 0 0px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 a {
@@ -430,10 +445,39 @@ a {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
+
+@media (min-width: 1440px){
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-subtitle{
+        font-size: 13px;
+    }
+}
+
+
 @media (max-width: 1024px) {
    
     .hebergements-and-populaires {
@@ -544,7 +588,7 @@ a {
     }
 
     .filter{
-        width: 32%;
+        width: auto;
     }
 
 

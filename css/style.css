@@ -165,14 +165,17 @@ input[type="text"]:focus {
 }
 
 .filter{
+    width : 160px;
+    white-space: nowrap;
     height: 50px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     border: 2px solid var(--main-bg-color);
     border-radius: 25px;
-    padding: 0 25px;
+    
     transition: background-color 0.3s;
 }
 
@@ -188,6 +191,9 @@ input[type="text"]:focus {
 .filter-pictogram{
     height: 22px;
     width: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .search-and-filters-info{
@@ -581,15 +587,9 @@ a {
         color : white;
     }
 
-    .filters-list{
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: space-between;
-    }
+    
 
-    .filter{
-        width: auto;
-    }
+   
 
 
     .hebergements{
@@ -676,5 +676,23 @@ a {
 
     .card-subtitle{
         font-size: 13px;
+    }
+
+    .filters-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        grid-gap: 20px;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .filter{   
+       width: 140px;
+       margin: auto;
+    }
+
+    .filter h3{
+        font-size: 14px;
     }
 }
